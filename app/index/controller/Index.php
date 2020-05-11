@@ -17,17 +17,17 @@ class Index extends Controller
 
     public function articleList()
     {
-        $res = Article::column("id, title");
-        //$res = $res->toArray();
+        //从数据库获取文章id和标题
+        $res = Article::column("id, title, content, create_at");
+        //传给模板显示文章列表
         $this->assign('list', $res);
-      	dump($res);
         return view('articleList');
     }
 
     public function getArticle()
     {
         //从前端获取文章id
-        $id=input('param.id');
+        $id = input('param.id');
         //数据库根据id查询
         $article = Article::get($id);
         //获取文章标题和内容
@@ -37,5 +37,10 @@ class Index extends Controller
         $this->assign('title', $title);
         $this->assign('content', $content);
         return view('article');
+    }
+
+    public function temp()
+    {
+        return view('temp');
     }
 }

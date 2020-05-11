@@ -1,137 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Blog Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Personal Portfolio Html5 One Page Template">
-    <meta name="keywords" content="agency, bootstrap, business, corporate, creative, landing page, marketing, multipurpose, product, product launch, responsive, software, startup, startup landing page">
-    <meta name="author" content="ParExcellence">
-    <!-- Site Title -->
-    <title>Jz's Blog</title>
- 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="__CSS__/bootstrap.min.css">
-    <!-- Material Icon -->
-    <link rel="stylesheet" href="__CSS__/materialdesignicons.min.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="__CSS__/magnific-popup.css" />
-    <!-- Carousel Slider -->
-    <link rel="stylesheet" href="__CSS__/owl.carousel.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet">
-    <!-- Custom  CSS -->
-    <link rel="stylesheet" href="__CSS__/style.css">
+    <!-- Custom styles for this template -->
+    <link href="__CSS__/blog.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Start Preloader -->
-    <div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
-    </div>
-    <!-- End preloader -->
 
-    <div id="main-wrapper">
-        <!-- Start Navbar -->
-        <div class="menu-toggler">
-            <span>
-                <i class="mdi mdi-menu"></i>
-            </span>
-        </div>
-        <header>
-            <div class="header-navbar h-100">
-                <a class="navbar-brand" href="#"><b>J</b><span>Jz's Blog</span></a>
-                <nav class="navbar menu-list">
-                    <ul class="list-group text-center" id="menu">
-                        <li class="list-group-item">
-                            <a href="index.html">
-                                <span class="menu-icon mx-auto"><i class="mdi mdi-home-outline"></i></span>
-                                <span>home</span>
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a class="active" href="#aboutus">
-                                <span class="menu-icon mx-auto"><i class="mdi mdi-book-outline"></i></span>
-                                <span>Articles</span>
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#portfolio">
-                                <span class="menu-icon mx-auto"><i class="mdi mdi-grid-large"></i></span>
-                                <span>Portfolio</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-        </header>
-        <!-- End Navbar -->
-        <!-- Start About-Us -->
-        <section class="section bg-light line-vector" id="aboutus">
-            <div class="section-area">
-                <div class="section-content">
-                    <div class="container">                       
-                        <div class="title-block mx-auto mb-5">
-                            <div class="section_title mb-4 text-center">
-                                <h2><span>Articles</span></h2>
-                            </div>
-                        </div>
-                        {for start="1" end="10"}
-                        <div class="row mt-2">
-                            <!-- Item 01 -->
-                            <div class="col">
-                                <a href="article.html"><p class="text-center">article seo</p></a>
-                            </div>
-                        </div> 
-                        {/for}
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End About-Us -->
-        <!-- Start Portfolio -->
-        <section id="portfolio" class="section portfolio-section">
-            <div class="section-area">
-                <div class="section-content">
-                    <div class="container">
-                        <div class="title-block mx-auto">
-                            <div class="section_title mb-4 text-center">
-                                <h2><span>Articles</span></h2>
-                            </div>
-                        </div>
-                        {for start="1" end="10"}
-                        <div class="row">
-                            <!-- Item 01 -->
-                            <div class="col">
-                                <p class="text-center">article seo</p>
-                            </div>
-                        </div> 
-                        {/for}
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--  End Portfolio -->
+  <div class="blog-masthead">
+    <div class="container">
+      <nav class="blog-nav">
+        <a class="blog-nav-item active" href="#">Home</a>
+        <a class="blog-nav-item" href="#">About</a>
+      </nav>
     </div>
-    <!-- Javascript -->
-    <script src="__JS__/jquery.min.js"></script>
-    <script src="__JS__/popper.min.js"></script>
-    <script src="__JS__/bootstrap.min.js"></script>
-    <script src="__JS__/jquery.easing.min.js"></script>
-    <script src="__JS__/jquery.waypoints.min.js"></script>
-    <script src="__JS__/owl.carousel.min.js"></script>
-    <script src="__JS__/jquery.counterup.js"></script>
-    <script src="__JS__/isotope.pkgd.min.js"></script>
-    <script src="__JS__/jquery.magnific-popup.min.js"></script>
-    <script src="__JS__/particles.js"></script>
-    <script src="__JS__/typed.min.js"></script>
-    <!-- Main Js   -->
-    <script src="__JS__/main.js"></script>
+  </div>
+
+  <div class="container">
+
+    <div class="blog-header">
+      <h1 class="blog-title">Jz's Blog</h1>
+      <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-8 blog-main">
+        {volist name="list" id="vo"}
+        <div class="blog-post">
+          <h2 class="blog-post-title"><a href="__URL__/getArticle/id/{$key}">{$vo.title}</a></h2>
+          <p class="blog-post-meta">{$vo.create_at}</p>
+
+          <p>{$vo.content}</p>
+          <hr>
+        </div>
+        {/volist}
+
+        <nav>
+          <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+        </nav>
+
+      </div><!-- /.blog-main -->
+
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <h4>About</h4>
+          <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+        <div class="sidebar-module">
+          <h4>Archives</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">March 2014</a></li>
+            <li><a href="#">February 2014</a></li>
+            <li><a href="#">January 2014</a></li>
+            <li><a href="#">December 2013</a></li>
+            <li><a href="#">November 2013</a></li>
+            <li><a href="#">October 2013</a></li>
+            <li><a href="#">September 2013</a></li>
+            <li><a href="#">August 2013</a></li>
+            <li><a href="#">July 2013</a></li>
+            <li><a href="#">June 2013</a></li>
+            <li><a href="#">May 2013</a></li>
+            <li><a href="#">April 2013</a></li>
+          </ol>
+        </div>
+        <div class="sidebar-module">
+          <h4>Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+  </div><!-- /.container -->
+
+  <footer class="blog-footer">
+    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-
 </html>
