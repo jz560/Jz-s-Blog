@@ -3,8 +3,36 @@
 <head>
    <meta charset="utf-8"> 
    <title>Jz's Blog</title>
-      {foreach $list as $key => $title}
-         <a id="{$key}" href="article.html">{$title}</a>
-      {/foreach}
+   <script src="__JS__/jquery.min.js"></script>
 </head>
+
 <body>
+   {foreach $list as $key => $title}
+         <a class="title" name="{$key}" href="__URL__/getArticle/id/{$key}">{$title}</a>
+   {/foreach}
+   __URL__
+
+   <script>
+      // $(document).ready(function(){
+         
+      //    $(".title").click(function(){
+      //       // let id = $(".title").attr("name");
+      //       // alert(id);
+      //       $.ajax({
+      //          url:'__URL__/getArticle',
+      //          type:"POST",
+      //          dataType:"JSON",
+      //          data:{'id':$(".title").attr("name")},
+      //          success : function(result) {
+      //           console.log(result);
+      //          },
+      //          //请求失败，包含具体的错误信息
+      //          error : function(e){
+      //             console.log(e.status);
+      //             console.log(e.responseText);
+      //          }
+      //       });
+      //    });
+      // });
+   </script>
+</body>
