@@ -34,11 +34,23 @@ class Index extends Controller
         $title = $article->title;
         $content = $article->content;
         $create_at = $article->create_at;
-        //传给模板
+        //将数据传给模板
         $this->assign('title', $title);
         $this->assign('content', $content);
         $this->assign('create_at', $create_at);
         return view('article');
+    }
+
+    public function getCategory()
+    {
+        //从前端获取文章分类
+        $category = input('param.category');
+        //根据分类查询数据库
+        $res = Article::where('category', $category)->column("id, title, content, create_at");
+        //将数据传给模板
+        $this->assign('list', $res);
+        return view('category');
+
     }
 
     public function temp()
