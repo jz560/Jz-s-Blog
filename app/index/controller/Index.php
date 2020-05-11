@@ -15,9 +15,18 @@ class Index extends Controller
         
     }
 
-    public function article()
+    public function articleList()
     {
-        $article = Article::get(1);
+        $res = Article::column("id, title");
+        //$res = $res->toArray();
+        $this->assign('list', $res);
+      	dump($res);
+        return view('articleList');
+    }
+
+    public function getArticle()
+    {
+        $article = Article::get(2);
         $title = $article->title;
         $content = $article->content;
         $this->assign('title', $title);
