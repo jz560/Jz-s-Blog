@@ -33,9 +33,11 @@ class Index extends Controller
         //获取文章标题和内容
         $title = $article->title;
         $content = $article->content;
+        $create_at = $article->create_at;
         //传给模板
         $this->assign('title', $title);
         $this->assign('content', $content);
+        $this->assign('create_at', $create_at);
         return view('article');
     }
 
