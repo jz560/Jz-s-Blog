@@ -17,8 +17,8 @@ class Index extends Controller
 
     public function articleList()
     {
-        //从数据库获取文章id和标题
-        $res = Article::column("id, title, content, create_at");
+        //从数据库获取文章数据并分页
+        $res = Article::paginate(10);
         //传给模板显示文章列表
         $this->assign('list', $res);
         return view('articleList');
@@ -46,7 +46,7 @@ class Index extends Controller
         //从前端获取文章分类
         $category = input('param.category');
         //根据分类查询数据库
-        $res = Article::where('category', $category)->column("id, title, content, create_at");
+        $res = Article::where('category', $category)->paginate(10);
         //将数据传给模板
         $this->assign('list', $res);
         return view('category');
