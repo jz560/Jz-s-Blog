@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 .idea
 composer.lock
 *.log
 thinkphp
 database.php
+=======
+node_modules
+>>>>>>> cfc7db04e7a39e27cf83f2fcf2bed34e3820b581

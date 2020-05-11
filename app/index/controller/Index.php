@@ -2,8 +2,6 @@
 namespace app\index\controller;
 
 use think\Controller;
-use think\Db;
-use app\index\model\User;
 use app\index\model\Article;
 class Index extends Controller
 {

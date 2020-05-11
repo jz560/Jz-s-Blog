@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 sudo: false
 
 language: php
@@ -40,3 +41,19 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
+=======
+language:      node_js
+git:
+  depth:       3
+node_js:
+  - "node"
+install:       npm install
+script:
+  - npm test
+  - gulp
+cache:
+  directories:
+    - node_modules
+notifications:
+  email:       false
+>>>>>>> cfc7db04e7a39e27cf83f2fcf2bed34e3820b581
