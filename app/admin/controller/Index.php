@@ -63,5 +63,11 @@ class Index extends Controller
     public function delete(){
         //从前端获取文章id
         $id = input('param.id');
+        $res = Article::destroy(['id' => $id]);
+        if($res == 1){
+            $this->redirect('index/index');
+        }else{
+            $this->error('Delete fail.');
+        }
     }
 }
