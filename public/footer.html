@@ -36,8 +36,24 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>window.jQuery || document.write('<script src="__JS__/jquery.min.js"><\/script>')</script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__STATIC__/editormd/lib/marked.min.js"></script>
+<script type="text/javascript" src="__STATIC__/editormd/lib/prettify.min.js"></script>
+<script type="text/javascript" src="__STATIC__/editormd/lib/raphael.min.js"></script>
+<script type="text/javascript" src="__STATIC__/editormd/lib/underscore.min.js"></script>
+<script type="text/javascript" src="__STATIC__/editormd/lib/sequence-diagram.min.js"></script>
+<script type="text/javascript" src="__STATIC__/editormd/lib/flowchart.min.js"></script>
+<script type="text/javascript" src="__STATIC__/editormd/editormd.min.js"></script>
+<script type="text/javascript">
+  testEditormdView2 = editormd.markdownToHTML("editormd-view", {
+        htmlDecode      : "style,script,iframe",  // you can filter tags decode
+        emoji           : true,
+        taskList        : true,
+        tex             : true,  // 默认不解析
+        flowChart       : true,  // 默认不解析
+        sequenceDiagram : true,  // 默认不解析
+  });
+</script>
 </body>
 </html>

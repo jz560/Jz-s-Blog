@@ -1,9 +1,11 @@
+{layout name="layout" /}
 <div class="col-sm-8 blog-main">
   <div class="blog-post">
     <h2 class="blog-post-title">{$title}</h2>
     <p class="blog-post-meta">{$create_at}</p>
-
-    <p>{$content}</p>
+    <div id="editormd-view">
+      <textarea style="display:none;" >{$content}</textarea>               
+    </div>
     <hr>
   </div>
 </div><!-- /.blog-main -->

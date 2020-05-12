@@ -1,1 +1,15 @@
-hello
+{layout name="layout" /}
+<div class="col-sm-8 blog-main">
+  {volist name="list" id="vo"}
+  <div class="blog-post">
+    <h2 class="blog-post-title"><a href="__URL__/getArticle/id/{$vo.id}">{$vo.title}</a></h2>
+    <p class="blog-post-meta">{$vo.create_at}</p>
+
+    <p>{$vo.content|strip_tags|substr=0,200}</p>
+    <hr>
+  </div>
+  {/volist}
+  {$list->render()}
+</div><!-- /.blog-main -->
+
+      

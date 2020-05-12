@@ -7,20 +7,14 @@ use think\Session;
 
 class Index extends Controller
 {
+
     public function index()
-    {
-
-        return view();
-        
-    }
-
-    public function articleList()
     {
         //从数据库获取文章数据并分页
         $res = Article::paginate(10);
         //传给模板显示文章列表
         $this->assign('list', $res);
-        return view('articleList');
+        return view();
     }
 
     public function getArticle()

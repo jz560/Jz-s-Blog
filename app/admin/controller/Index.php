@@ -27,10 +27,12 @@ class Index extends Controller
         //取得文章数据
         $title = $_POST['title'];
         $content = $_POST['content'];
+        $category = $_POST['category'];
         //写入数据库
         $article = new Article([
             'title' => $title,
-            'content' => $content
+            'content' => $content,
+            'category' => $category
         ]);
         $res = $article->save();
 
@@ -49,10 +51,12 @@ class Index extends Controller
         //获取文章标题和内容
         $title = $article->title;
         $content = $article->content;
+        $category = $article->category;
         //传给模板
         $this->assign('id', $id);
         $this->assign('title', $title);
         $this->assign('content', $content);
+        $this->assign('category', $category);
         return view('edit');
     }
 
@@ -61,13 +65,15 @@ class Index extends Controller
         $id = $_POST['id'];
         $title = $_POST['title'];
         $content = $_POST['content'];
+        $category = $_POST['category'];
         //更新数据库
         if(!empty($title) && !empty($content)){
             $article = new Article;
             // save方法第二个参数为更新条件
             $res = $article->save([
                 'title'  => $title,
-                'content' => $content
+                'content' => $content,
+                'category' => $category
             ],['id' => $id]);
             
             if($res == 1){
