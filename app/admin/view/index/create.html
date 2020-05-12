@@ -1,0 +1,32 @@
+{layout name="layout" /}
+<div class="card shadow mb-4">
+    <form method="POST" action="__URL__/create">
+        <div class="card-header py-3">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h6 class="m-0 font-weight-bold text-primary"><input name="title" class="form-control" type="text" placeholder="Title"/></h6>
+                </div>
+                <div class="col-sm-2">
+                    <input class="btn btn-primary" type="submit" value="Publish" />
+                </div>
+            </div>
+        </div>
+        <div class="card-body" style="height:40em;">
+            <div id="test-editor">
+                <textarea name="content" style="display:none;">
+                    
+                </textarea>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        var editor = editormd("test-editor", {
+            //width  : "80%",
+            //height : "50%",
+            path   : "__STATIC__/editormd/lib/"
+        });
+    });
+</script>

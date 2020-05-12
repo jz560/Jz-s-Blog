@@ -19,8 +19,26 @@ class Index extends Controller
         return view();
     }
 
-    public function create(){
+    public function showCreate(){
+        return view('create');
+    }
 
+    public function create(){
+        //取得文章数据
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        //写入数据库
+        $article = new Article([
+            'title' => $title,
+            'content' => $content
+        ]);
+        $res = $article->save();
+
+        if($res == 1){
+            $this->success('Create success!', 'index/index');
+        }else{
+            $this->error('Create fail.');
+        }
     }
 
     public function showEdit(){
