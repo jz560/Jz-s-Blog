@@ -19,6 +19,10 @@ class Index extends Controller
         return view();
     }
 
+    public function create(){
+
+    }
+
     public function edit(){
         //从前端获取文章id
         $id = input('param.id');
@@ -28,7 +32,7 @@ class Index extends Controller
         $title = $article->title;
         $content = $article->content;
         $create_at = $article->create_at;
-        dump($article);
+        return view('edit');
     }
 
     public function delete(){

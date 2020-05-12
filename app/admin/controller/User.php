@@ -17,12 +17,12 @@ class User extends Controller
         $res = UserModel::where('name', $username)->where('pwd', $password)->column('id');
         if(count($res) == 1){
             Session::set('id', 1);
-            $this->success('login success', 'index/index');
+            $this->redirect('index/index', 302);
         }
     }
 
     function logout(){
         Session::delete('id');
-        $this->success('redirecting','user/showLogin');
+        $this->redirect('user/showLogin', 302);
     }
 }
