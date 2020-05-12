@@ -3,11 +3,15 @@ namespace app\admin\controller;
 
 use think\Controller;
 use app\index\model\Article;
+use think\Session;
 
 class Index extends Controller
 {
     public function index()
     {
+        if(!Session::has('id')){
+            return $this->error('Login please...', 'user/showLogin');
+        }
         //从数据库获取文章数据并分页
         $res = Article::paginate(10);
         //传给模板显示文章列表

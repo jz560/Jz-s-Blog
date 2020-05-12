@@ -3,12 +3,13 @@ namespace app\index\controller;
 
 use think\Controller;
 use app\index\model\Article;
+use think\Session;
+
 class Index extends Controller
 {
     public function index()
     {
-        //$this->assign('name', 'jz');
-        
+
         return view();
         
     }
