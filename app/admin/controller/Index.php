@@ -23,7 +23,7 @@ class Index extends Controller
 
     }
 
-    public function edit(){
+    public function showEdit(){
         //从前端获取文章id
         $id = input('param.id');
         //数据库根据id查询
@@ -31,8 +31,33 @@ class Index extends Controller
         //获取文章标题和内容
         $title = $article->title;
         $content = $article->content;
-        $create_at = $article->create_at;
+        //传给模板
+        $this->assign('id', $id);
+        $this->assign('title', $title);
+        $this->assign('content', $content);
         return view('edit');
+    }
+
+    public function edit(){
+        //取得文章数据
+        $id = $_POST['id'];
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        //更新数据库
+        if(!empty($title) && !empty($content)){
+            $article = new Article;
+            // save方法第二个参数为更新条件
+            $res = $article->save([
+                'title'  => $title,
+                'content' => $content
+            ],['id' => $id]);
+            
+            if($res == 1){
+                $this->success('Edit success!', 'index/index');
+            }else{
+                $this->error('Edit fail.');
+            }
+        }
     }
 
     public function delete(){
